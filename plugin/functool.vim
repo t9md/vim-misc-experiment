@@ -21,10 +21,10 @@ function! s:extract_SNR(funcname)
     return matchstr(a:funcname, '<SNR>\d\+')
 endfunction
 
-function! s:get_funcname_for(funname, ...)
+function! FuncToolFuncNameFor(funname, ...)
     let candidate = s:script_local_function_names()
     if a:0 > 0
-        let snr = s:extract_SNR(s:get_funcname_for(a:1)[0])
+        let snr = s:extract_SNR(FuncToolFuncNameFor(a:1)[0])
         call filter(candidate, "v:val =~# snr")
     endif
     let result = filter(candidate, "v:val =~# a:funname")
