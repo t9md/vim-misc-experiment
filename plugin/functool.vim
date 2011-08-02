@@ -38,18 +38,18 @@ function! s:chRoot()
     "test"
 endfunction
 
-" Usage:
-"==================================================================
-" Simple search
-echo PP(s:get_funcname_for("chRoot"))
-" =>  ['<SNR>175_chRoot', '<SNR>63_chRoot']
-
-" Determine anchor
-echo PP(s:get_funcname_for("initNerdTree$"))
-" => ['<SNR>63_initNerdTree']
-
-" User anchor to identify target function
-echo PP(s:get_funcname_for("chRoot", 'initNerdTree$'))
-" => ['<SNR>63_chRoot'] 
-
-finish
+"" Usage:
+""==================================================================
+"" Simple search
+"echo PP(s:get_funcname_for("chRoot"))
+"" =>  ['<SNR>175_chRoot', '<SNR>63_chRoot']
+"
+"" Determine anchor
+"echo PP(s:get_funcname_for("initNerdTree$"))
+"" => ['<SNR>63_initNerdTree']
+"
+"" User anchor to identify target function
+"echo PP(s:get_funcname_for("chRoot", 'initNerdTree$'))
+"" => ['<SNR>63_chRoot'] 
+"
+"finish
